@@ -1,0 +1,10 @@
+project -> users post likh payenge 
+
+functionalities:
+
+1. login and register       👍
+2. logout                   👍
+3. post creation
+4. post like
+5. post delete(only to the owner of the post)
+6. post edit (only to the owner of the post)
