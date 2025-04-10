@@ -115,8 +115,9 @@ app.post("/update/:id", async (req, res) => {
     res.redirect("/profile");
 })
 
-app.get("/delete/:id", async (req, res) => {
+app.get("/delete/:id",isLoggedin, async (req, res) => {
     let post = await postModel.deleteOne({_id: req.params.id});
+    let user = await userModel.findOneAndUpdate({_id: req.user.userid}, {$pull: {posts: req.params.id}});
     res.redirect("/profile");
 })
 
